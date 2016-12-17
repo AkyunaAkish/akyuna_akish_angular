@@ -30103,6 +30103,19 @@
 	    _classCallCheck(this, PortfolioController);
 
 	    this.message = 'Portfolio!';
+	    this.bricks = [{
+	        src: '/images/barber_and_style.png'
+	    }, {
+	        src: '/images/keenly_done.png'
+	    }, {
+	        src: '/images/rails_mythical_creatures.png'
+	    }, {
+	        src: '/images/react_image_search.png'
+	    }, {
+	        src: '/images/react_youtube.png'
+	    }, {
+	        src: '/images/writings_on_the_wall.png'
+	    }];
 	};
 
 	;
@@ -30115,7 +30128,7 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<navbar-directive></navbar-directive>\n"
+	module.exports = "<navbar-directive></navbar-directive>\n\n<div class='profile-image-container'>\n    <a class='thumbnail'>\n        <img src='/images/Akyuna_Akish.jpg' alt='Akyuna Akish'>\n    </a>\n</div>\n"
 
 /***/ },
 /* 12 */
@@ -30171,7 +30184,7 @@
 
 
 	// module
-	exports.push([module.id, "*,\n*:after,\n*:before {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  font-family: 'Titillium Web', sans-serif; }\n\nbody {\n  background: #474747; }\n\nembed,\nimg,\nobject,\nvideo {\n  max-width: 100%;\n  height: auto; }\n\nbody {\n  margin: 0 !important;\n  padding: 0 !important; }\n\n.navbar {\n  background: #222222;\n  border: none;\n  border-radius: 0; }\n  .navbar #navbar-img {\n    height: 50px;\n    margin-right: 10px;\n    margin-left: 10px; }\n  .navbar .navbar-nav li {\n    background: white;\n    cursor: pointer; }\n    .navbar .navbar-nav li a {\n      color: #474747; }\n      .navbar .navbar-nav li a:hover {\n        color: #56d0f6; }\n  .navbar .navbar-toggle {\n    background: white;\n    border: none; }\n    .navbar .navbar-toggle .icon-bar {\n      background: #56d0f6; }\n    .navbar .navbar-toggle:hover .icon-bar {\n      background: #222222; }\n  .navbar .navbar-collapse.in.collapse {\n    border: none; }\n    .navbar .navbar-collapse.in.collapse li {\n      text-align: center; }\n      .navbar .navbar-collapse.in.collapse li a {\n        font-size: 1.5em; }\n", ""]);
+	exports.push([module.id, "*,\n*:after,\n*:before {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  font-family: 'Titillium Web', sans-serif; }\n\nbody {\n  background: #474747; }\n\nembed,\nimg,\nobject,\nvideo {\n  max-width: 100%;\n  height: auto; }\n\nbody {\n  margin: 0 !important;\n  padding: 0 !important; }\n\n.profile-image-container .col {\n  padding: 0; }\n\n.profile-image-container .thumbnail {\n  background: none;\n  border: none; }\n  .profile-image-container .thumbnail img {\n    border-radius: 2%; }\n\n.navbar {\n  background: #222222;\n  border: none;\n  border-radius: 0; }\n  .navbar #navbar-img {\n    height: 50px;\n    margin-right: 10px;\n    margin-left: 10px; }\n  .navbar .navbar-nav li {\n    background: white;\n    cursor: pointer; }\n    .navbar .navbar-nav li a {\n      color: #474747; }\n      .navbar .navbar-nav li a:hover {\n        color: #56d0f6; }\n  .navbar .navbar-toggle {\n    background: white;\n    border: none; }\n    .navbar .navbar-toggle .icon-bar {\n      background: #56d0f6; }\n    .navbar .navbar-toggle:hover .icon-bar {\n      background: #222222; }\n  .navbar .navbar-collapse.in.collapse {\n    border: none; }\n    .navbar .navbar-collapse.in.collapse li {\n      text-align: center; }\n      .navbar .navbar-collapse.in.collapse li a {\n        font-size: 1.5em; }\n", ""]);
 
 	// exports
 

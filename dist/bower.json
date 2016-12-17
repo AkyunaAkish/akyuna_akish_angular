@@ -16,8 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "devicons": "^1.8.0",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "bootstrap": "^3.3.7"
   }
 }

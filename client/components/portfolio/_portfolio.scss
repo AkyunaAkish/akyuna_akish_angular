@@ -4,3 +4,18 @@ body {
     margin: 0 !important;
     padding: 0 !important;
 }
+
+.profile-image-container {
+    .col {
+        padding: 0;
+    }
+
+    .thumbnail {
+        background: none;
+        border: none;
+
+        img {
+            border-radius: 2%;
+        }
+    }
+}
