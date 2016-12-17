@@ -61,19 +61,23 @@
 
 	__webpack_require__(5);
 
-	var _portfolioDirective = __webpack_require__(6);
+	var _navbarDirective = __webpack_require__(6);
+
+	var _navbarDirective2 = _interopRequireDefault(_navbarDirective);
+
+	var _portfolioDirective = __webpack_require__(9);
 
 	var _portfolioDirective2 = _interopRequireDefault(_portfolioDirective);
 
-	var _routes = __webpack_require__(9);
+	var _routes = __webpack_require__(12);
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	__webpack_require__(10);
+	__webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_angular2.default.module('akyunaAkish', ['ui.router', 'ui.bootstrap']).directive('portfolioDirective', _portfolioDirective2.default).config(_routes2.default);
+	_angular2.default.module('akyunaAkish', ['ui.router', 'ui.bootstrap']).directive('navbarDirective', _navbarDirective2.default).directive('portfolioDirective', _portfolioDirective2.default).config(_routes2.default);
 
 /***/ },
 /* 2 */
@@ -30009,16 +30013,16 @@
 	  value: true
 	});
 
-	var _portfolioController = __webpack_require__(7);
+	var _navbarController = __webpack_require__(7);
 
-	var _portfolioController2 = _interopRequireDefault(_portfolioController);
+	var _navbarController2 = _interopRequireDefault(_navbarController);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function () {
 	  return {
 	    template: __webpack_require__(8),
-	    controller: _portfolioController2.default,
+	    controller: _navbarController2.default,
 	    restrict: 'E',
 	    controllerAs: 'vm',
 	    scope: {},
@@ -30028,6 +30032,63 @@
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var NavbarController = function NavbarController() {
+	    _classCallCheck(this, NavbarController);
+
+	    this.message = 'Navbar!';
+	};
+
+	;
+
+	NavbarController.$inject = [];
+
+	exports.default = NavbarController;
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	module.exports = "<nav class='navbar navbar-default' role='navigation'>\n    <div class='navbar-header'>\n        <button type='button' class='navbar-toggle' ng-init='isNavCollapsed=true' ng-click='isNavCollapsed = !isNavCollapsed'>\n            <span class='sr-only'>Toggle navigation</span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n        </button>\n        <div><img id='navbar-img' src='/images/akyunatransparent.png'/></div>\n    </div>\n    <div class='collapse navbar-collapse' uib-collapse='isNavCollapsed'>\n        <ul class='nav navbar-nav'>\n            <li>\n                <a href='/Akyuna_Akish_Resume.pdf' target='_blank'>Resume</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n"
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _portfolioController = __webpack_require__(10);
+
+	var _portfolioController2 = _interopRequireDefault(_portfolioController);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = function () {
+	  return {
+	    template: __webpack_require__(11),
+	    controller: _portfolioController2.default,
+	    restrict: 'E',
+	    controllerAs: 'vm',
+	    scope: {},
+	    bindToController: true
+	  };
+	};
+
+/***/ },
+/* 10 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30051,13 +30112,13 @@
 	exports.default = PortfolioController;
 
 /***/ },
-/* 8 */
+/* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class='navbar navbar-default' role='navigation'>\n    <div class='navbar-header'>\n        <button type='button' class='navbar-toggle' ng-init='isNavCollapsed=true' ng-click='isNavCollapsed = !isNavCollapsed'>\n            <span class='sr-only'>Toggle navigation</span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n        </button>\n        <div><img id='navbar-img' src='/images/akyunatransparent.png'/></div>\n    </div>\n    <div class='collapse navbar-collapse' uib-collapse='isNavCollapsed'>\n        <ul class='nav navbar-nav'>\n            <li>\n                <a href='/Akyuna_Akish_Resume.pdf' target='_blank'>Resume</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n"
+	module.exports = "<navbar-directive></navbar-directive>\n"
 
 /***/ },
-/* 9 */
+/* 12 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30076,16 +30137,16 @@
 	}];
 
 /***/ },
-/* 10 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(11);
+	var content = __webpack_require__(14);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(13)(content, {});
+	var update = __webpack_require__(16)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -30102,10 +30163,10 @@
 	}
 
 /***/ },
-/* 11 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(12)();
+	exports = module.exports = __webpack_require__(15)();
 	// imports
 
 
@@ -30116,7 +30177,7 @@
 
 
 /***/ },
-/* 12 */
+/* 15 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30171,7 +30232,7 @@
 	};
 
 /***/ },
-/* 13 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
