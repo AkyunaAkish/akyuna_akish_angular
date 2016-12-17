@@ -30054,7 +30054,7 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1 ng-bind='vm.message'></h1>\n"
+	module.exports = "<nav class='navbar navbar-default' role='navigation'>\n\t\t<div class='navbar-header'>\n\t\t\t<button type='button' class='navbar-toggle' ng-init='isNavCollapsed=true' ng-click='isNavCollapsed = !isNavCollapsed'>\n\t\t\t\t<span class='sr-only'>Toggle navigation</span>\n\t\t\t\t<span class='icon-bar'></span>\n\t\t\t\t<span class='icon-bar'></span>\n\t\t\t\t<span class='icon-bar'></span>\n\t\t\t</button>\n\t\t\t<a class='navbar-brand' href='#'>A menu</a>\n\t\t</div>\n\t\t<div class='collapse navbar-collapse' uib-collapse='isNavCollapsed'>\n\t\t\t<ul class='nav navbar-nav'>\n\t\t\t\t<li><a href='#'>Link 1</a></li>\n\t\t\t\t<li><a href='#'>Link 2</a></li>\n\t\t\t</ul>\n\t\t</div>\n\t</nav>\n"
 
 /***/ },
 /* 9 */
