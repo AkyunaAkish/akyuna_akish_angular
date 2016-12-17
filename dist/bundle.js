@@ -30054,7 +30054,7 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class='navbar navbar-default' role='navigation'>\n\t\t<div class='navbar-header'>\n\t\t\t<button type='button' class='navbar-toggle' ng-init='isNavCollapsed=true' ng-click='isNavCollapsed = !isNavCollapsed'>\n\t\t\t\t<span class='sr-only'>Toggle navigation</span>\n\t\t\t\t<span class='icon-bar'></span>\n\t\t\t\t<span class='icon-bar'></span>\n\t\t\t\t<span class='icon-bar'></span>\n\t\t\t</button>\n\t\t\t<a class='navbar-brand' href='#'>A menu</a>\n\t\t</div>\n\t\t<div class='collapse navbar-collapse' uib-collapse='isNavCollapsed'>\n\t\t\t<ul class='nav navbar-nav'>\n\t\t\t\t<li><a href='#'>Link 1</a></li>\n\t\t\t\t<li><a href='#'>Link 2</a></li>\n\t\t\t</ul>\n\t\t</div>\n\t</nav>\n"
+	module.exports = "<nav class='navbar navbar-default' role='navigation'>\n    <div class='navbar-header'>\n        <button type='button' class='navbar-toggle' ng-init='isNavCollapsed=true' ng-click='isNavCollapsed = !isNavCollapsed'>\n            <span class='sr-only'>Toggle navigation</span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n        </button>\n        <div><img id='navbar-img' src='/images/akyunatransparent.png'/></div>\n    </div>\n    <div class='collapse navbar-collapse' uib-collapse='isNavCollapsed'>\n        <ul class='nav navbar-nav'>\n            <li>\n                <a href='/Akyuna_Akish_Resume.pdf' target='_blank'>Resume</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n"
 
 /***/ },
 /* 9 */
@@ -30068,9 +30068,6 @@
 	exports.default = ['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 	    $stateProvider.state('portfolio', {
 	        url: '/',
-	        template: '<portfolio-directive></portfolio-directive>'
-	    }).state('other', {
-	        url: '/p',
 	        template: '<portfolio-directive></portfolio-directive>'
 	    });
 
@@ -30113,7 +30110,7 @@
 
 
 	// module
-	exports.push([module.id, "*,\n*:after,\n*:before {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  font-family: 'Titillium Web', sans-serif; }\n\nembed,\nimg,\nobject,\nvideo {\n  max-width: 100%;\n  height: auto; }\n", ""]);
+	exports.push([module.id, "*,\n*:after,\n*:before {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  font-family: 'Titillium Web', sans-serif; }\n\nbody {\n  background: #474747; }\n\nembed,\nimg,\nobject,\nvideo {\n  max-width: 100%;\n  height: auto; }\n\nbody {\n  margin: 0 !important;\n  padding: 0 !important; }\n\n.navbar {\n  background: #222222;\n  border: none;\n  border-radius: 0; }\n  .navbar #navbar-img {\n    height: 50px;\n    margin-right: 10px;\n    margin-left: 10px; }\n  .navbar .navbar-nav li {\n    background: white;\n    cursor: pointer; }\n    .navbar .navbar-nav li a {\n      color: #474747; }\n      .navbar .navbar-nav li a:hover {\n        color: #56d0f6; }\n  .navbar .navbar-toggle {\n    background: white;\n    border: none; }\n    .navbar .navbar-toggle .icon-bar {\n      background: #56d0f6; }\n    .navbar .navbar-toggle:hover .icon-bar {\n      background: #222222; }\n  .navbar .navbar-collapse.in.collapse {\n    border: none; }\n    .navbar .navbar-collapse.in.collapse li {\n      text-align: center; }\n      .navbar .navbar-collapse.in.collapse li a {\n        font-size: 1.5em; }\n", ""]);
 
 	// exports
 

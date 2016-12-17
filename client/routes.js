@@ -4,10 +4,6 @@ export default (['$stateProvider', '$urlRouterProvider', '$locationProvider',
             .state('portfolio', {
                 url: '/',
                 template: '<portfolio-directive></portfolio-directive>'
-            })
-            .state('other', {
-                url: '/p',
-                template: '<portfolio-directive></portfolio-directive>'
             });
 
         $urlRouterProvider.otherwise('/');
