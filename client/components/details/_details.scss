@@ -58,8 +58,20 @@
         margin: 5px;
     }
 }
+
+.skills-section-title {
+    width: 50%;
+    margin: 0 auto;
+    background: $dark;
+    color: $blue;
+    border: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin-bottom: 25px;
+}
 @media screen and (max-width: 850px) {
-    .details-panel {
+    .details-panel,
+    .skills-section-title {
         width: 90% !important;
     }
 

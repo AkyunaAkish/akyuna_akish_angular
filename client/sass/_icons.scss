@@ -1,5 +1,9 @@
 @import 'variables';
 
+.devicons {
+    cursor: default;
+}
+
 .devicons-html5 {
     &::before {
         color: rgb(200,134,79);
@@ -197,6 +201,16 @@
 
     &:hover {
         color: rgb(238,175,72) !important;
+    }
+}
+
+.devicons-less {
+    &::before {
+        color: white;
+    }
+
+    &:hover {
+        color: white !important;
     }
 }
 
