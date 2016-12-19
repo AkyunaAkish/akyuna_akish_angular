@@ -69,15 +69,19 @@
 
 	var _portfolioDirective2 = _interopRequireDefault(_portfolioDirective);
 
-	var _routes = __webpack_require__(12);
+	var _detailsDirective = __webpack_require__(12);
+
+	var _detailsDirective2 = _interopRequireDefault(_detailsDirective);
+
+	var _routes = __webpack_require__(15);
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	__webpack_require__(13);
+	__webpack_require__(16);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_angular2.default.module('akyunaAkish', ['ui.router', 'ui.bootstrap']).directive('navbarDirective', _navbarDirective2.default).directive('portfolioDirective', _portfolioDirective2.default).config(_routes2.default);
+	_angular2.default.module('akyunaAkish', ['ui.router', 'ui.bootstrap']).directive('navbarDirective', _navbarDirective2.default).directive('portfolioDirective', _portfolioDirective2.default).directive('detailsDirective', _detailsDirective2.default).config(_routes2.default);
 
 /***/ },
 /* 2 */
@@ -30034,7 +30038,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -30044,8 +30048,6 @@
 
 	var NavbarController = function NavbarController() {
 	    _classCallCheck(this, NavbarController);
-
-	    this.message = 'Navbar!';
 	};
 
 	;
@@ -30102,19 +30104,36 @@
 	var PortfolioController = function PortfolioController() {
 	    _classCallCheck(this, PortfolioController);
 
-	    this.message = 'Portfolio!';
-	    this.bricks = [{
-	        src: '/images/barber_and_style.png'
+	    this.projects = [{
+	        title: 'React/Redux/NodeJS blog application',
+	        github: 'https://github.com/AkyunaAkish/react-redux-blog-application',
+	        live: 'https://writings-on-the-wall.herokuapp.com/',
+	        img: '/images/writings_on_the_wall.png'
 	    }, {
-	        src: '/images/keenly_done.png'
+	        title: 'React/Redux image search',
+	        github: 'https://github.com/AkyunaAkish/react-redux-image-search',
+	        live: 'https://react-redux-image-search.firebaseapp.com/',
+	        img: '/images/react_image_search.png'
 	    }, {
-	        src: '/images/rails_mythical_creatures.png'
+	        title: 'React youtube search',
+	        github: 'https://github.com/AkyunaAkish/reactJS_youtube_search',
+	        live: 'https://react-youtube-search.firebaseapp.com/',
+	        img: '/images/react_youtube.png'
 	    }, {
-	        src: '/images/react_image_search.png'
+	        title: 'AngularJS social media application',
+	        github: 'https://github.com/AkyunaAkish/keenly_done',
+	        live: 'https://keenlydone.firebaseapp.com/',
+	        img: '/images/keenly_done.png'
 	    }, {
-	        src: '/images/react_youtube.png'
+	        title: 'AngularJS barber shop site',
+	        github: 'https://github.com/AkyunaAkish/barberAndStyle',
+	        live: 'http://legacybarberandstyle.herokuapp.com/',
+	        img: '/images/barber_and_style.png'
 	    }, {
-	        src: '/images/writings_on_the_wall.png'
+	        title: 'Ruby on Rails CRUD application',
+	        github: 'https://github.com/AkyunaAkish/creaturesRailsApp',
+	        live: 'http://mythical-creatures.herokuapp.com/',
+	        img: '/images/rails_mythical_creatures.png'
 	    }];
 	};
 
@@ -30128,10 +30147,65 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<navbar-directive></navbar-directive>\n\n<div class='profile-image-container'>\n    <a class='thumbnail'>\n        <img src='/images/Akyuna_Akish.jpg' alt='Akyuna Akish'>\n    </a>\n</div>\n"
+	module.exports = "<navbar-directive></navbar-directive>\n<details-directive></details-directive>\n\n<div class='container-fluid'>\n    <div class='row-fluid'>\n        <div class='col-lg-3' ng-repeat='project in vm.projects'>\n            <div class='item'>\n                <div class='content'>\n                    <div class='project-panel panel panel-default'>\n                        <div class='panel-heading text-center' ng-bind='project.title'></div>\n                        <div class='panel-body'>\n                            <a ng-href='{{project.github}}' target='_blank'>\n                                <img class='project-img center-block' ng-src='{{project.img}}'>\n                            </a>\n                            <div class='project-link-container text-center'>\n                                <a ng-href='{{project.github}}' target='_blank'>\n                                    <button type='button' class='btn fa fa-github'>\n                                        GitHub Repo\n                                    </button>\n                                </a>\n                                <a class='project-links' ng-href='{{project.live}}' target='_blank'>\n                                    <button type='button' class='btn fa fa-globe'>\n                                        Live Site\n                                    </button>\n                                </a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
 
 /***/ },
 /* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _detailsController = __webpack_require__(13);
+
+	var _detailsController2 = _interopRequireDefault(_detailsController);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = function () {
+	  return {
+	    template: __webpack_require__(14),
+	    controller: _detailsController2.default,
+	    restrict: 'E',
+	    controllerAs: 'vm',
+	    scope: {},
+	    bindToController: true
+	  };
+	};
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var DetailsController = function DetailsController() {
+	    _classCallCheck(this, DetailsController);
+	};
+
+	;
+
+	DetailsController.$inject = [];
+
+	exports.default = DetailsController;
+
+/***/ },
+/* 14 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class='profile-image-container'>\n    <a class='thumbnail'>\n        <img src='/images/Akyuna_Akish.jpg' alt='Akyuna Akish'>\n    </a>\n</div>\n\n<div class='details-panel panel panel-default'>\n    <div class='panel-body'>\n        <h3>Full Stack Web/Application Developer</h3>\n        <h5>Boulder, CO</h5>\n        <a href='https://github.com/AkyunaAkish' target='_blank'>\n            <button type='button' class='btn fa fa-github'>\n                GitHub\n            </button>\n        </a>\n        <a href='https://www.linkedin.com/in/akyunaakish' target='_blank'>\n            <button type='button' class='btn fa fa-linkedin'>\n                LinkedIn\n            </button>\n            <a href='mailto:akyunaakish@gmail.com'>\n                <button type='button' class='btn fa fa-envelope'>\n                    akyunaakish@gmail.com\n                </button>\n            </a>\n            <a href='tel:17605856334'>\n                <button type='button' class='btn fa fa-phone'>\n                    760-585-6334\n                </button>\n            </a>\n        </div>\n    </div>\n\n    <div class='skills-panel panel panel-default'>\n        <div class='panel-body'>\n            <button type='button' class='btn devicons devicons-html5'>\n                HTML\n            </button>\n            <button type='button' class='btn devicons devicons-css3'>\n                CSS\n            </button>\n            <button type='button' class='btn devicons devicons-sass'>\n                SASS\n            </button>\n            <button type='button' class='btn devicons devicons-bootstrap'>\n                Bootstrap\n            </button>\n            <button type='button' class='btn devicons devicons-javascript_badge'>\n                JavaScript\n            </button>\n            <button type='button' class='btn devicons devicons-jquery'>\n                jQuery\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                ReactJS\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                Redux\n            </button>\n            <button type='button' class='btn devicons devicons-angular'>\n                AngularJS\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                Webpack\n            </button>\n            <button type='button' class='btn devicons devicons-gulp'>\n                GulpJS\n            </button>\n            <button type='button' class='btn devicons devicons-nodejs_small'>\n                NodeJS\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                ExpressJS\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                Socket.io\n            </button>\n            <button type='button' class='btn devicons devicons-postgresql'>\n                PostgreSQL\n            </button>\n            <button type='button' class='btn devicons devicons-mongodb'>\n                MongoDB\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                API Development\n            </button>\n            <button type='button' class='btn devicons devicons-firebase'>\n                Firebase\n            </button>\n            <button type='button' class='btn devicons devicons-git'>\n                Git/Github\n            </button>\n            <button type='button' class='btn devicons devicons-npm'>\n                NPM\n            </button>\n            <button type='button' class='btn devicons devicons-bower'>\n                Bower\n            </button>\n            <button type='button' class='btn devicons devicons-terminal'>\n                Terminal\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                TDD\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                Mocha/Chai/Jasmine\n            </button>\n            <button type='button' class='btn devicons devicons-atom'>\n                Deployment\n            </button>\n            <button type='button' class='btn devicons devicons-heroku'>\n                Heroku\n            </button>\n        </div>\n    </div>\n"
+
+/***/ },
+/* 15 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30150,16 +30224,16 @@
 	}];
 
 /***/ },
-/* 13 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(14);
+	var content = __webpack_require__(17);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(16)(content, {});
+	var update = __webpack_require__(19)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -30176,21 +30250,21 @@
 	}
 
 /***/ },
-/* 14 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(15)();
+	exports = module.exports = __webpack_require__(18)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "*,\n*:after,\n*:before {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  font-family: 'Titillium Web', sans-serif; }\n\nbody {\n  background: #474747; }\n\nembed,\nimg,\nobject,\nvideo {\n  max-width: 100%;\n  height: auto; }\n\nbody {\n  margin: 0 !important;\n  padding: 0 !important; }\n\n.profile-image-container .col {\n  padding: 0; }\n\n.profile-image-container .thumbnail {\n  background: none;\n  border: none; }\n  .profile-image-container .thumbnail img {\n    border-radius: 2%; }\n\n.navbar {\n  background: #222222;\n  border: none;\n  border-radius: 0; }\n  .navbar #navbar-img {\n    height: 50px;\n    margin-right: 10px;\n    margin-left: 10px; }\n  .navbar .navbar-nav li {\n    background: white;\n    cursor: pointer; }\n    .navbar .navbar-nav li a {\n      color: #474747; }\n      .navbar .navbar-nav li a:hover {\n        color: #56d0f6; }\n  .navbar .navbar-toggle {\n    background: white;\n    border: none; }\n    .navbar .navbar-toggle .icon-bar {\n      background: #56d0f6; }\n    .navbar .navbar-toggle:hover .icon-bar {\n      background: #222222; }\n  .navbar .navbar-collapse.in.collapse {\n    border: none; }\n    .navbar .navbar-collapse.in.collapse li {\n      text-align: center; }\n      .navbar .navbar-collapse.in.collapse li a {\n        font-size: 1.5em; }\n", ""]);
+	exports.push([module.id, "*,\n*:after,\n*:before {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  font-family: 'Titillium Web', sans-serif; }\n\nbody {\n  background: #474747; }\n\nembed,\nimg,\nobject,\nvideo {\n  max-width: 100%;\n  height: auto; }\n\n.devicons-html5::before {\n  color: #c8864f; }\n\n.devicons-html5:hover {\n  color: #c8864f !important; }\n\n.devicons-css3::before {\n  color: #759eb3; }\n\n.devicons-css3:hover {\n  color: #759eb3 !important; }\n\n.devicons-sass::before {\n  color: #e66fda; }\n\n.devicons-sass:hover {\n  color: #e66fda !important; }\n\n.devicons-bootstrap::before {\n  color: #544980; }\n\n.devicons-bootstrap:hover {\n  color: #544980 !important; }\n\n.devicons-javascript_badge::before {\n  color: #f0d032; }\n\n.devicons-javascript_badge:hover {\n  color: #f0d032 !important; }\n\n.devicons-jquery::before {\n  color: #8bcff2; }\n\n.devicons-jquery:hover {\n  color: #8bcff2 !important; }\n\n.devicons-angular::before {\n  color: #ca3d32; }\n\n.devicons-angular:hover {\n  color: #ca3d32 !important; }\n\n.devicons-gulp::before {\n  color: #9f4b49; }\n\n.devicons-gulp:hover {\n  color: #9f4b49 !important; }\n\n.devicons-nodejs_small::before {\n  color: #88b359; }\n\n.devicons-nodejs_small:hover {\n  color: #88b359 !important; }\n\n.devicons-postgresql::before {\n  color: #3d97c6; }\n\n.devicons-postgresql:hover {\n  color: #3d97c6 !important; }\n\n.devicons-mongodb::before {\n  color: #6ba24b; }\n\n.devicons-mongodb:hover {\n  color: #6ba24b !important; }\n\n.devicons-ruby::before {\n  color: #9d2d20; }\n\n.devicons-ruby:hover {\n  color: #9d2d20 !important; }\n\n.devicons-ruby_on_rails::before {\n  color: #9d2d20; }\n\n.devicons-ruby_on_rails:hover {\n  color: #9d2d20 !important; }\n\n.devicons-firebase::before {\n  color: #edbe7c; }\n\n.devicons-firebase:hover {\n  color: #edbe7c !important; }\n\n.devicons-git::before {\n  color: #e25e3f; }\n\n.devicons-git:hover {\n  color: #e25e3f !important; }\n\n.devicons-npm::before {\n  color: #bb4943; }\n\n.devicons-npm:hover {\n  color: #bb4943 !important; }\n\n.devicons-bower::before {\n  color: #d89656; }\n\n.devicons-bower:hover {\n  color: #d89656 !important; }\n\n.devicons-terminal::before {\n  color: white; }\n\n.devicons-terminal:hover {\n  color: white !important; }\n\n.devicons-heroku::before {\n  color: #525885; }\n\n.devicons-heroku:hover {\n  color: #525885 !important; }\n\n.devicons-netbeans::before {\n  color: #eeaf48; }\n\n.devicons-netbeans:hover {\n  color: #eeaf48 !important; }\n\n.devicons-atom::before {\n  color: #7fca89; }\n\n.devicons-atom:hover {\n  color: #7fca89 !important; }\n\nbody {\n  margin: 0 !important;\n  padding: 0 !important; }\n\n.project-panel {\n  border: none; }\n  .project-panel .panel-heading {\n    background: #222222;\n    color: white; }\n  .project-panel .project-link-container {\n    width: 100%;\n    padding-top: 5px; }\n    .project-panel .project-link-container a button {\n      background: #222222;\n      color: white; }\n      .project-panel .project-link-container a button:hover {\n        color: #56d0f6; }\n\n.navbar {\n  background: #222222;\n  border: none;\n  border-radius: 0; }\n  .navbar #navbar-img {\n    height: 50px;\n    margin-right: 10px;\n    margin-left: 10px; }\n  .navbar .navbar-nav li {\n    background: white;\n    cursor: pointer; }\n    .navbar .navbar-nav li a {\n      color: #474747; }\n      .navbar .navbar-nav li a:hover {\n        color: #56d0f6; }\n  .navbar .navbar-toggle {\n    background: white;\n    border: none; }\n    .navbar .navbar-toggle .icon-bar {\n      background: #56d0f6; }\n    .navbar .navbar-toggle:hover .icon-bar {\n      background: #222222; }\n  .navbar .navbar-collapse.in.collapse {\n    border: none; }\n    .navbar .navbar-collapse.in.collapse li {\n      text-align: center; }\n      .navbar .navbar-collapse.in.collapse li a {\n        font-size: 1.5em; }\n\n.profile-image-container .col {\n  padding: 0; }\n\n.profile-image-container .thumbnail {\n  background: none;\n  border: none; }\n  .profile-image-container .thumbnail img {\n    border-radius: 2%; }\n\n.details-panel {\n  width: 50%;\n  margin: 0 auto;\n  text-align: center;\n  background: #222222;\n  border: none;\n  overflow: hidden;\n  word-wrap: break-word;\n  margin-bottom: 25px; }\n  .details-panel h3 {\n    color: #56d0f6; }\n  .details-panel h5 {\n    color: white; }\n  .details-panel button {\n    background: white;\n    color: #222222;\n    margin: 5px; }\n    .details-panel button:hover {\n      color: #56d0f6; }\n\n.skills-panel {\n  width: 50%;\n  margin: 0 auto;\n  text-align: center;\n  background: none;\n  border: none;\n  margin-bottom: 50px;\n  color: white; }\n  .skills-panel button {\n    background: #222222;\n    margin: 5px; }\n\n@media screen and (max-width: 850px) {\n  .details-panel {\n    width: 90% !important; }\n  .skills-panel {\n    width: 90% !important; } }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 15 */
+/* 18 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30245,7 +30319,7 @@
 	};
 
 /***/ },
-/* 16 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

@@ -4,3 +4,28 @@ body {
     margin: 0 !important;
     padding: 0 !important;
 }
+
+.project-panel {
+    border: none;
+
+    .panel-heading {
+        background: $dark;
+        color: white;
+    }
+
+    .project-link-container {
+        width: 100%;
+        padding-top: 5px;
+
+        a {
+            button {
+                background: $dark;
+                color: white;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
