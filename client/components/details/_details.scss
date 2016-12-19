@@ -1,0 +1,69 @@
+@import '../../sass/variables';
+
+.profile-image-container {
+    .col {
+        padding: 0;
+    }
+
+    .thumbnail {
+        background: none;
+        border: none;
+
+        img {
+            border-radius: 2%;
+        }
+    }
+}
+
+.details-panel {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    background: $dark;
+    border: none;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    h3 {
+        color: $blue;
+    }
+
+    h5 {
+        color: white;
+    }
+
+    button {
+        background: white;
+        color: $dark;
+        margin: 5px;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+    margin-bottom: 25px;
+}
+
+.skills-panel {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    background: none;
+    border: none;
+    margin-bottom: 50px;
+    color: white;
+
+    button {
+        background: $dark;
+        margin: 5px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .details-panel {
+        width: 90% !important;
+    }
+
+    .skills-panel {
+        width: 90% !important;
+    }
+}

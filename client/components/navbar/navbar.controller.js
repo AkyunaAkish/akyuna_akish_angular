@@ -1,7 +1,5 @@
 class NavbarController {
-    constructor() {
-        this.message = 'Navbar!';
-    }
+    constructor() {}
 };
 
 NavbarController.$inject = [];
