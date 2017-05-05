@@ -26,7 +26,7 @@ class PortfolioController {
             live: 'https://react-youtube-search.firebaseapp.com/',
             img: '/images/react_youtube.png'
         }, {
-            title: 'AngularJS social media application',
+            title: 'AngularJS/Firebase social media application',
             github: 'https://github.com/AkyunaAkish/keenly_done',
             live: 'https://keenlydone.firebaseapp.com/',
             img: '/images/keenly_done.png'
