@@ -1,6 +1,16 @@
 class PortfolioController {
     constructor() {
         this.projects = [{
+            title: 'AngularJS/Stripe API/NodeJS payment system',
+            github: '',
+            live: 'https://tranzact.zayo.com/',
+            img: '/images/payment_system.png'
+        },{
+            title: 'AngularJS/NodeJS blog application',
+            github: 'https://github.com/AkyunaAkish/e_a',
+            live: 'http://www.elenaakish.com',
+            img: '/images/Elena_Akish_blog.png'
+        },{
             title: 'React/Redux/NodeJS blog application',
             github: 'https://github.com/AkyunaAkish/react-redux-blog-application',
             live: 'https://writings-on-the-wall.herokuapp.com/',

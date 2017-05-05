@@ -20,8 +20,11 @@
                             </a>
                             <div class='project-link-container text-center'>
                                 <a ng-href='{{project.github}}' target='_blank'>
-                                    <button type='button' class='btn fa fa-github'>
+                                    <button ng-if='project.github.length' type='button' class='btn fa fa-github'>
                                         GitHub Repo
+                                    </button>
+                                    <button ng-if='!project.github.length' ng-disabled='true' type='button' class='btn fa fa-github'>
+                                        Private Repo
                                     </button>
                                 </a>
                                 <a class='project-links' ng-href='{{project.live}}' target='_blank'>
