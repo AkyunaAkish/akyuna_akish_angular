@@ -30366,7 +30366,7 @@
 /* 8 */
 /***/ (function(module, exports) {
 
-	module.exports = "<nav class='navbar navbar-default' role='navigation'>\n    <div class='navbar-header'>\n        <button type='button' class='navbar-toggle' ng-init='isNavCollapsed=true' ng-click='isNavCollapsed = !isNavCollapsed'>\n            <span class='sr-only'>Toggle navigation</span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n        </button>\n        <div><img id='navbar-img' src='/images/akyunatransparent.png'/></div>\n    </div>\n    <div class='collapse navbar-collapse' uib-collapse='isNavCollapsed'>\n        <ul class='nav navbar-nav'>\n            <li>\n                <a href='/Akyuna_Akish_Resume.pdf' target='_blank'>Resume</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n"
+	module.exports = "<nav class='navbar navbar-default' role='navigation'>\n    <div class='navbar-header'>\n        <button type='button' class='navbar-toggle' ng-init='isNavCollapsed=true' ng-click='isNavCollapsed = !isNavCollapsed'>\n            <span class='sr-only'>Toggle navigation</span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n            <span class='icon-bar'></span>\n        </button>\n        <div><img id='navbar-img' src='/images/akyunatransparent.png'/></div>\n    </div>\n    <div class='collapse navbar-collapse' uib-collapse='isNavCollapsed'>\n        <ul class='nav navbar-nav'>\n            <li>\n                <a href='/Akyuna_Akish_Resume.pdf' target='_blank' ng-click='isNavCollapsed = true'>Resume</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n"
 
 /***/ }),
 /* 9 */
