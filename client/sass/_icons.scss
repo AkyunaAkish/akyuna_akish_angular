@@ -214,6 +214,16 @@
     }
 }
 
+.devicons-redis {
+    &::before {
+        color: rgb(216, 44, 32);
+    }
+
+    &:hover {
+        color: rgb(216, 44, 32) !important;
+    }
+}
+
 .devicons-atom {
     &::before {
         color: rgb(127,202,137);
