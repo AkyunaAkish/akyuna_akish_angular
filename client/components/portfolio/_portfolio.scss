@@ -1,5 +1,4 @@
 @import '../../sass/variables';
-
 body {
     margin: 0 !important;
     padding: 0 !important;
@@ -7,21 +6,21 @@ body {
 
 .project-panel {
     border: none;
-
     .panel-heading {
         background: $dark;
         color: white;
+        height: 70px;
+        overflow: hidden;
+        vertical-align: middle;
     }
-
     .project-link-container {
         width: 100%;
         padding-top: 5px;
-
         a {
             button {
+                margin-bottom: 5px;
                 background: $dark;
                 color: white;
-
                 &:hover {
                     color: $blue;
                 }
@@ -53,7 +52,8 @@ body {
 }
 
 @media screen and (max-width: 850px) {
-    .project-section-title, .skills-section-title {
+    .project-section-title,
+    .skills-section-title {
         width: 90% !important;
     }
 }
